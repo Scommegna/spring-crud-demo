@@ -1,0 +1,7 @@
+spring.application.name=appname
+
+spring.datasource.url=dburl
+spring.datasource.username=dbusername
+spring.datasource.password=dbpassword
+
+logging.level.root=warn
