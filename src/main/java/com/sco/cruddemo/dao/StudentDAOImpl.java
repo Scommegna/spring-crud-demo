@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public class StudentDAOImpl implements StudentDAO {
-    private EntityManager entityManager;
+    private final EntityManager entityManager;
 
     @Autowired
     public StudentDAOImpl(EntityManager entityManager) {
@@ -19,5 +19,10 @@ public class StudentDAOImpl implements StudentDAO {
     @Transactional
     public void save(Student student) {
         entityManager.persist(student);
+    }
+
+    @Override
+    public Student findById(Integer id) {
+        return entityManager.find(Student.class, id);
     }
 }
