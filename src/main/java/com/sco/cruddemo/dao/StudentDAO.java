@@ -2,8 +2,12 @@ package com.sco.cruddemo.dao;
 
 import com.sco.cruddemo.entity.Student;
 
+import java.util.List;
+
 public interface StudentDAO {
     void save(Student student);
 
     Student findById(Integer id);
+
+    List<Student> findAll();
 }
